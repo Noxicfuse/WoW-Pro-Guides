@@ -4,6 +4,31 @@
 -- Permissions beyond the scope of this license may be available at http://www.wow-pro.com/License.
 
 -- URL: http://wow-pro.com/wiki/source_code_shadowmoon_valley_alliance
+-- Date: 2014-05-30 12:24
+-- Who: Ludovicus
+-- Log: Level setting
+
+-- URL: http://wow-pro.com/node/3285/revisions/26348/view
+-- Date: 2014-05-27 20:33
+-- Who: Ludovicus
+-- Log: End Level corrected from 0 to 70.
+
+-- URL: http://wow-pro.com/node/3285/revisions/26277/view
+-- Date: 2014-05-26 00:46
+-- Who: Ludovicus
+-- Log: Added guide type.
+
+-- URL: http://wow-pro.com/node/3285/revisions/26153/view
+-- Date: 2014-05-20 19:44
+-- Who: Ludovicus
+-- Log: Icon
+
+-- URL: http://wow-pro.com/node/3285/revisions/25988/view
+-- Date: 2014-05-14 22:43
+-- Who: Ludovicus
+-- Log: New registration guide.
+
+-- URL: http://wow-pro.com/node/3285/revisions/25382/view
 -- Date: 2013-01-12 20:44
 -- Who: Emmaleah
 -- Log: fixes for multi coordinates
@@ -102,7 +127,11 @@
 -- Date: 2010-12-03 21:57
 -- Who: Jiyambi
 
-WoWPro.Leveling:RegisterGuide('CraSha7070A', 'Shadowmoon Valley', 'Crackerhead22', '69', '70', 'JamBor6872', 'Alliance', function()
+local guide = WoWPro:RegisterGuide('CraSha7070A', "Leveling", 'Shadowmoon Valley', 'Crackerhead22', 'Alliance')
+WoWPro:GuideLevels(guide,67,70,67.7799)
+WoWPro:GuideNextGuide(guide, 'JamBor6872')
+WoWPro:GuideIcon(guide,"ACH",4928)
+WoWPro:GuideSteps(guide, function()
 return [[
 
 A Visions of Destruction|QID|11044|M|55.38,68.73|Z|Nagrand|N|From Seer Jovar.|

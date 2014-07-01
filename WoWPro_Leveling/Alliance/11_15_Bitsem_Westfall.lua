@@ -4,6 +4,26 @@
 -- Permissions beyond the scope of this license may be available at http://www.wow-pro.com/License.
 
 -- URL: http://wow-pro.com/wiki/source_code_westfall
+-- Date: 2014-05-30 12:13
+-- Who: Ludovicus
+-- Log: Level setting
+
+-- URL: http://wow-pro.com/node/3213/revisions/26214/view
+-- Date: 2014-05-25 22:33
+-- Who: Ludovicus
+-- Log: Added guide type.
+
+-- URL: http://wow-pro.com/node/3213/revisions/26133/view
+-- Date: 2014-05-20 18:47
+-- Who: Ludovicus
+-- Log: Icon
+
+-- URL: http://wow-pro.com/node/3213/revisions/25956/view
+-- Date: 2014-05-14 22:06
+-- Who: Ludovicus
+-- Log: New registration guide.
+
+-- URL: http://wow-pro.com/node/3213/revisions/25805/view
 -- Date: 2013-11-18 21:46
 -- Who: Fluclo
 -- Log: Add LVL tag
@@ -92,7 +112,11 @@
 -- Date: 2010-12-03 07:21
 -- Who: Jiyambi
 
-WoWPro.Leveling:RegisterGuide('BitWes1020', 'Westfall', 'Bitsem', '10', '15', 'KurRed1520', 'Alliance', function()
+local guide = WoWPro:RegisterGuide('BitWes1020', "Leveling", 'Westfall', 'Bitsem', 'Alliance')
+WoWPro:GuideLevels(guide,8,14,10.4861)
+WoWPro:GuideNextGuide(guide, 'KurRed1520')
+WoWPro:GuideIcon(guide,"ACH",4928)
+WoWPro:GuideSteps(guide, function()
 return [[
 
 L Level 9 |QID|26209|LVL|9|N|This guide requires a minimum level of 9 to do.|

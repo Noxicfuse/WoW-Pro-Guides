@@ -4,6 +4,30 @@
 -- Permissions beyond the scope of this license may be available at http://www.wow-pro.com/License.
 
 -- URL: http://wow-pro.com/wiki/source_code_vash039jir_horde
+-- Date: 2014-06-02 16:08
+-- Who: Ludovicus
+-- Log: Added missing Z tag to [Twilight Cage Key]
+
+-- URL: http://wow-pro.com/node/3306/revisions/26423/view
+-- Date: 2014-06-02 13:17
+-- Who: Ludovicus
+-- Log: Set Levels
+
+-- URL: http://wow-pro.com/node/3306/revisions/26295/view
+-- Date: 2014-05-26 01:14
+-- Who: Ludovicus
+-- Log: Added guide type.
+
+-- URL: http://wow-pro.com/node/3306/revisions/26122/view
+-- Date: 2014-05-18 23:04
+-- Who: Ludovicus
+-- Log: Icon
+
+-- URL: http://wow-pro.com/node/3306/revisions/26001/view
+-- Date: 2014-05-16 20:29
+-- Who: Ludovicus
+
+-- URL: http://wow-pro.com/node/3306/revisions/25873/view
 -- Date: 2014-01-23 00:21
 -- Who: Ludovicus
 -- Log: Corrected some Z tags
@@ -97,7 +121,11 @@
 -- Date: 2010-12-03 23:05
 -- Who: Jiyambi
 
-WoWPro.Leveling:RegisterGuide('AriVasH8082', "Vash'jir", 'Arixan', '80', '82', 'AriDee8283', 'Horde', function()
+local guide = WoWPro:RegisterGuide('AriVasH8082', "Leveling", "Vash'jir", 'Arixan', 'Horde')
+WoWPro:GuideLevels(guide,80,80, 79.988)
+WoWPro:GuideNextGuide(guide, 'AriDee8283')
+WoWPro:GuideIcon(guide,"ACH",4825)
+WoWPro:GuideSteps(guide, function()
 return [[
 
 A Warchief's Command: Vashj'ir!|QID|27718|M|49.67,76.45|Z|Orgrimmar|N|From Warchief's Command Board.|
@@ -676,7 +704,7 @@ A Ascend No More!|QID|26142|RANK|1|M|38.7,44.8|Z|Abyssal Depths|N|From L'ghorek|
 
 C Runestones of Binding|QID|26141|S|M|31.2,58.8|Z|Abyssal Depths|L|57096 7|N|Kill any Twilight Candidates you see until you get 7 Runestones of Binding.|
 C Ascend No More!|QID|26142|S|QO|Ancient Conduits destroyed: 5/5|M|28.1,57.5|Z|Abyssal Depths|N|Destroy Ancient Conduits.|
-l Twilight Cage Key|QID|26149|L|57118|N|Kill Twilight Hammer mobs until the key drops.|M|31.2,58.8|
+l Twilight Cage Key|QID|26149|L|57118|N|Kill Twilight Hammer mobs until the key drops.|M|31.2,58.8|Z|Abyssal Depths|
 A Prisoners|QID|26149|RANK|1|M|31.2,58.8|Z|Abyssal Depths|U|57118|N|Accept the quest from the key.|
 C Prisoners|QID|26149|M|31.2,58.8|Z|Abyssal Depths|N|Free Prisoners.|
 C Ascend No More!|QID|26142|US|QO|Ancient Conduits destroyed: 5/5|M|28.1,57.5|Z|Abyssal Depths|N|Destroy Ancient Conduits.|

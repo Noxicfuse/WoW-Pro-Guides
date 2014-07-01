@@ -4,6 +4,31 @@
 -- Permissions beyond the scope of this license may be available at http://www.wow-pro.com/License.
 
 -- URL: http://wow-pro.com/wiki/source_code_bloodmyst_isle
+-- Date: 2014-05-30 12:15
+-- Who: Ludovicus
+-- Log: Level setting
+
+-- URL: http://wow-pro.com/node/3220/revisions/26370/view
+-- Date: 2014-05-27 21:25
+-- Who: Ludovicus
+-- Log: GuideLevels corrected from "12,20" to "0,19".
+
+-- URL: http://wow-pro.com/node/3220/revisions/26221/view
+-- Date: 2014-05-25 22:40
+-- Who: Ludovicus
+-- Log: Added guide type.
+
+-- URL: http://wow-pro.com/node/3220/revisions/26088/view
+-- Date: 2014-05-18 22:01
+-- Who: Ludovicus
+-- Log: Icon
+
+-- URL: http://wow-pro.com/node/3220/revisions/25957/view
+-- Date: 2014-05-14 22:08
+-- Who: Ludovicus
+-- Log: New registration guide.
+
+-- URL: http://wow-pro.com/node/3220/revisions/25648/view
 -- Date: 2013-05-14 19:23
 -- Who: Ludovicus
 -- Log: Corrected quest named [Oh, the Tangled Webs They Weave]
@@ -77,7 +102,11 @@
 -- Date: 2010-12-03 07:35
 -- Who: Jiyambi
 
-WoWPro.Leveling:RegisterGuide("SveBlo1220", "Bloodmyst Isle", "Sven", "12", "20", "WkjAsh2025", "Alliance", function()
+local guide = WoWPro:RegisterGuide("SveBlo1220", "Leveling", "Bloodmyst Isle", "Sven", "Alliance")
+WoWPro:GuideLevels(guide,8,19,12.9677)
+WoWPro:GuideNextGuide(guide, "WkjAsh2025")
+WoWPro:GuideIcon(guide,"ACH",4926)
+WoWPro:GuideSteps(guide, function()
 return [[
 
 R Bloodmyst Isle |QID|9624|M|65.25,94.00|Z|Bloodmyst Isle|N|There are two quests to lead you to Bloodmyst Isle. 'Elekks Are Serious Business' from Torallius the Pack Handler outside The Exodar if you have done the Coming of Age quest in Azuremyst Isle, or Hero's Call: Bloodmyst Isle! from the Hero's Callboard in The Exodar. Take either of these two quests, then head north to Booodmyst Isle.|

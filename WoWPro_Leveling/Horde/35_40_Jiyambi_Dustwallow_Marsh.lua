@@ -4,6 +4,26 @@
 -- Permissions beyond the scope of this license may be available at http://www.wow-pro.com/License.
 
 -- URL: http://wow-pro.com/wiki/source_code_dustwallow_marsh_horde
+-- Date: 2014-06-02 15:13
+-- Who: Ludovicus
+-- Log: Set Levels
+
+-- URL: http://wow-pro.com/node/3242/revisions/26241/view
+-- Date: 2014-05-25 22:56
+-- Who: Ludovicus
+-- Log: Added guide type.
+
+-- URL: http://wow-pro.com/node/3242/revisions/26075/view
+-- Date: 2014-05-18 21:47
+-- Who: Ludovicus
+-- Log: Icon
+
+-- URL: http://wow-pro.com/node/3242/revisions/26024/view
+-- Date: 2014-05-17 16:54
+-- Who: Ludovicus
+-- Log: New registration guide.
+
+-- URL: http://wow-pro.com/node/3242/revisions/25746/view
 -- Date: 2013-08-16 19:42
 -- Who: Ludovicus
 -- Log: Added the new nest of eggs for [The Brood of Onyxia]
@@ -51,7 +71,11 @@
 -- Date: 2010-12-03 11:16
 -- Who: Jiyambi
 
-WoWPro.Leveling:RegisterGuide('JiyDus3540', 'Dustwallow Marsh', 'Jiyambi', '35', '40', 'JiyTho4045', 'Horde', function()
+local guide = WoWPro:RegisterGuide('JiyDus3540', "Leveling", 'Dustwallow Marsh', 'Jiyambi', 'Horde')
+WoWPro:GuideLevels(guide,34,39, 35.0632)
+WoWPro:GuideNextGuide(guide, 'JiyTho4045')
+WoWPro:GuideIcon(guide,"ACH",4929)
+WoWPro:GuideSteps(guide, function()
 return [[
 
 A Suspicious Hoofprints|RANK|1|QID|27259|M|29.68,47.55|N|From a patch of dirt on the ground.|

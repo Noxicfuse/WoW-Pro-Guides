@@ -4,6 +4,30 @@
 -- Permissions beyond the scope of this license may be available at http://www.wow-pro.com/License.
 
 -- URL: http://wow-pro.com/wiki/source_code_elwynn_forest
+-- Date: 2014-06-02 22:08
+-- Who: Ludovicus
+-- Log: Icons
+
+-- URL: http://wow-pro.com/node/3197/revisions/26393/view
+-- Date: 2014-05-30 12:01
+-- Who: Ludovicus
+-- Log: Stetting levels
+
+-- URL: http://wow-pro.com/node/3197/revisions/26203/view
+-- Date: 2014-05-25 22:06
+-- Who: Ludovicus
+-- Log: Added guide type
+
+-- URL: http://wow-pro.com/node/3197/revisions/26130/view
+-- Date: 2014-05-20 18:41
+-- Who: Ludovicus
+-- Log: Icon
+
+-- URL: http://wow-pro.com/node/3197/revisions/25949/view
+-- Date: 2014-05-14 21:47
+-- Who: Ludovicus
+
+-- URL: http://wow-pro.com/node/3197/revisions/25628/view
 -- Date: 2013-05-14 15:48
 -- Who: Ludovicus
 -- Log: Corrected coords for C [The Fargodeep Mine]
@@ -121,7 +145,11 @@
 -- Date: 2010-12-02 09:42
 -- Who: Jiyambi
 
-WoWPro.Leveling:RegisterGuide("KurElw0111", "Elwynn Forest(Human)", "Kurich", "01", "11", "BitWes1020", "Alliance", function()
+local guide = WoWPro:RegisterGuide("KurElw0111", "Leveling", "Elwynn Forest(Human)", "Kurich", "Alliance")
+WoWPro:GuideLevels(guide,1,9,4.83099)
+WoWPro:GuideNextGuide(guide, "BitWes1020")
+WoWPro:GuideIcon(guide,"Icon", WoWPro:GuidePickGender("Interface\\Icons\\Achievement_Character_Human_Male","Interface\\Icons\\Achievement_Character_Human_Female"))
+WoWPro:GuideSteps(guide, function()
 return [[
 
 A Beating Them Back!|QID|28762|C|Paladin|M|48.20,42.06|R|Human|N|From Marshal McBride.|

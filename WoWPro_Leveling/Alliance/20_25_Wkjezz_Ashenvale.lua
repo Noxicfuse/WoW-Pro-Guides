@@ -4,6 +4,26 @@
 -- Permissions beyond the scope of this license may be available at http://www.wow-pro.com/License.
 
 -- URL: http://wow-pro.com/wiki/source_code_ashenvale_alliance
+-- Date: 2014-05-27 21:17
+-- Who: Ludovicus
+-- Log: GuideLevels corrected from "0,0" to "17,24".
+
+-- URL: http://wow-pro.com/node/3225/revisions/26226/view
+-- Date: 2014-05-25 22:44
+-- Who: Ludovicus
+-- Log: Added guide type.
+
+-- URL: http://wow-pro.com/node/3225/revisions/26071/view
+-- Date: 2014-05-18 21:44
+-- Who: Ludovicus
+-- Log: Icon
+
+-- URL: http://wow-pro.com/node/3225/revisions/25963/view
+-- Date: 2014-05-14 22:17
+-- Who: Ludovicus
+-- Log: New registration guide.
+
+-- URL: http://wow-pro.com/node/3225/revisions/25426/view
 -- Date: 2013-01-13 15:07
 -- Who: Ludovicus
 -- Log: Added C* tags
@@ -109,8 +129,11 @@
 -- Date: 2010-12-03 09:14
 -- Who: Jiyambi
 
-WoWPro.Leveling:RegisterGuide('WkjAsh2025', 'Ashenvale', 'WKJezz', '20', '25', 'WkjSton2530', 'Alliance', function()
-
+local guide = WoWPro:RegisterGuide('WkjAsh2025', "Leveling", 'Ashenvale', 'WKJezz', 'Alliance')
+WoWPro:GuideLevels(guide,17,24)
+WoWPro:GuideNextGuide(guide, 'WkjSton2530')
+WoWPro:GuideIcon(guide,"ACH",4925)
+WoWPro:GuideSteps(guide, function()
 
 return [[
 

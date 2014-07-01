@@ -4,6 +4,64 @@
 -- Permissions beyond the scope of this license may be available at http://www.wow-pro.com/License.
 
 -- URL: http://wow-pro.com/wiki/source_code_durotar
+-- Date: 2014-06-02 22:14
+-- Who: Ludovicus
+-- Log: Icons
+
+-- URL: http://wow-pro.com/node/3199/revisions/26461/view
+-- Date: 2014-06-02 15:47
+-- Who: Ludovicus
+-- Log: Syntax correction
+
+-- URL: http://wow-pro.com/node/3199/revisions/26431/view
+-- Date: 2014-06-02 13:59
+-- Who: Ludovicus
+-- Log: Set levels
+
+-- URL: http://wow-pro.com/node/3199/revisions/26321/view
+-- Date: 2014-05-26 19:57
+-- Who: Ludovicus
+-- Log: Added more guide types.
+
+-- URL: http://wow-pro.com/node/3199/revisions/26208/view
+-- Date: 2014-05-25 22:22
+-- Who: Ludovicus
+-- Log: Added guide type.
+
+-- URL: http://wow-pro.com/node/3199/revisions/26139/view
+-- Date: 2014-05-20 19:14
+-- Who: Ludovicus
+-- Log: Icon
+
+-- URL: http://wow-pro.com/node/3199/revisions/26046/view
+-- Date: 2014-05-17 17:45
+-- Who: Ludovicus
+
+-- URL: http://wow-pro.com/node/3199/revisions/26045/view
+-- Date: 2014-05-17 17:45
+-- Who: Ludovicus
+
+-- URL: http://wow-pro.com/node/3199/revisions/26039/view
+-- Date: 2014-05-17 17:28
+-- Who: Ludovicus
+-- Log: New registration guide.
+
+-- URL: http://wow-pro.com/node/3199/revisions/25945/view
+-- Date: 2014-04-26 07:51
+-- Who: Hendo72
+-- Log: Echo Isles:
+--	- Removed |RANK|1| tags as they are not needed.
+--	- Rephrased 'The Ancient Enemy' note and added an extra set of coordinates because the current one gives the impression that you have to go into the cave as opposed to on top of it. (I spent 20 minutes in the cave trying to figure out where I was suppose to go.)
+
+-- URL: http://wow-pro.com/node/3199/revisions/25944/view
+-- Date: 2014-04-24 06:43
+-- Who: Hendo72
+-- Log: Valley of Trials
+--	- Removed |RANK|1| commands as they are not needed. (In my opinion)
+--	- Changed |CC| to |CS| in "T Back to the Den"... The player might not take the exact route prescribed.
+--	- Added QID to Hearth step as well as coords in case their HS is on CD.
+
+-- URL: http://wow-pro.com/node/3199/revisions/25855/view
 -- Date: 2013-12-26 21:33
 -- Who: Ludovicus
 -- Log: Changed some CN to CS so they clean up right.  Made things safe for goblins.
@@ -163,7 +221,10 @@
 -- Date: 2010-12-02 21:14
 -- Who: Jiyambi
 
-WoWPro.Leveling:RegisterGuide('BitDur0512', 'Durotar', 'Bitsem', '05', '12', 'BitAzs1220', 'Horde', function()
+local guide = WoWPro:RegisterGuide('BitDur0512', 'Leveling', 'Durotar', 'Bitsem', 'Horde')
+WoWPro:GuideLevels(guide,4,10,5.43307)
+WoWPro:GuideNextGuide(guide, 'BitAzs1220')
+WoWPro:GuideSteps(guide, function()
 return [[
 
 A Breaking the Chain|QID|25167|M|56.02,74.71|N|From Master Gadrin.|

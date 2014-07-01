@@ -4,6 +4,32 @@
 -- Permissions beyond the scope of this license may be available at http://www.wow-pro.com/License.
 
 -- URL: http://wow-pro.com/wiki/source_code_cape_stranglethorn_alliance
+-- Date: 2014-05-27 20:19
+-- Who: Ludovicus
+-- Log: GuideLevels corrected from "0,0" to "26,34".
+
+-- URL: http://wow-pro.com/node/3237/revisions/26236/view
+-- Date: 2014-05-25 22:53
+-- Who: Ludovicus
+-- Log: Added guide type.
+
+-- URL: http://wow-pro.com/node/3237/revisions/26095/view
+-- Date: 2014-05-18 22:11
+-- Who: Ludovicus
+-- Log: Icon
+
+-- URL: http://wow-pro.com/node/3237/revisions/25968/view
+-- Date: 2014-05-14 22:23
+-- Who: Ludovicus
+-- Log: New registration guide.
+
+-- URL: http://wow-pro.com/node/3237/revisions/25904/view
+-- Date: 2014-02-28 07:56
+-- Who: Hendo72
+-- Log: Hendo72 - Feb 28/2014
+--	Commented out flight to Booty Bay. You will not have the FP until you get to Booty Bay. Added code to Run to Booty Bay instead.
+
+-- URL: http://wow-pro.com/node/3237/revisions/25721/view
 -- Date: 2013-06-18 01:07
 -- Who: Ludovicus
 -- Log: quest 26805's name [To the Cape] does not match Grail's database [To the Cape!].
@@ -82,7 +108,11 @@
 -- Date: 2010-12-03 11:07
 -- Who: Jiyambi
 
-WoWPro.Leveling:RegisterGuide('BitCap3035', 'The Cape of Stranglethorn', 'Bitsem', '30', '35', 'BitWes3540', 'Alliance', function()
+local guide = WoWPro:RegisterGuide('BitCap3035', "Leveling", 'The Cape of Stranglethorn', 'Bitsem', 'Alliance')
+WoWPro:GuideLevels(guide,26,34)
+WoWPro:GuideNextGuide(guide, 'BitWes3540')
+WoWPro:GuideIcon(guide,"ACH",4905)
+WoWPro:GuideSteps(guide, function()
 return [[
 
 L Level 29 |QID|26805|N|You need to be Level 29 to work this guide.|LVL|29|
@@ -178,7 +208,9 @@ C High Priest Venoxis|QID|26814|M|83.70,35.96|Z|Northern Stranglethorn|N|Kill th
 T High Priest Venoxis|QID|26814|U|60374M|55.70,42.27|N|To Maywiki.|
 T Recipe for Disaster|QID|26816|M|55.31,41.93|N|To Dask "The Flask" Gobfizzle.|
 
-F Booty Bay |QID|26821|N|Fly to Booty Bay.|
+; ** You will not have the FP in Booty Bay yet.
+;F Booty Bay |QID|26821|N|Fly to Booty Bay.|
+R Booty Bay|QID|26821|M|50.97,43.09;45.26,65.73|CC|N|Follow the path to the final cordinates and walk through the tunnel.|
 h Booty Bay|QID|26821|M|40.93,73.79|N|At Innkeeper Skindle.|
 T Airwyn Bantamflax|QID|26821|M|42.49,73.15|N|To Airwyn Bantamflax.|
 T Message in a Bottle|QID|26603|M|42.38,67.76;45.00,65.96;59.43,79.24|CC|N|To Princess Poobah on Jaguero Isle.|

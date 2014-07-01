@@ -4,6 +4,35 @@
 -- Permissions beyond the scope of this license may be available at http://www.wow-pro.com/License.
 
 -- URL: http://wow-pro.com/wiki/source_code_kunlai_summit_neutral
+-- Date: 2014-06-02 13:25
+-- Who: Ludovicus
+-- Log: Set Levels
+
+-- URL: http://wow-pro.com/node/3490/revisions/26413/view
+-- Date: 2014-05-30 15:30
+-- Who: Ludovicus
+-- Log: All panda guides have an 85 floor.
+
+-- URL: http://wow-pro.com/node/3490/revisions/26371/view
+-- Date: 2014-05-27 21:26
+-- Who: Ludovicus
+-- Log: Start Level corrected from 88 to 1.
+
+-- URL: http://wow-pro.com/node/3490/revisions/26305/view
+-- Date: 2014-05-26 01:25
+-- Who: Ludovicus
+-- Log: Added guide type.
+
+-- URL: http://wow-pro.com/node/3490/revisions/26113/view
+-- Date: 2014-05-18 22:46
+-- Who: Ludovicus
+-- Log: Icon
+
+-- URL: http://wow-pro.com/node/3490/revisions/26049/view
+-- Date: 2014-05-17 19:00
+-- Who: Ludovicus
+
+-- URL: http://wow-pro.com/node/3490/revisions/25872/view
 -- Date: 2014-01-19 21:25
 -- Who: Hendo72
 -- Log: Added change note at bottom of the guide which I forgot to do earlier. No other changes were done at this time.
@@ -171,7 +200,11 @@
 -- Who: Ludovicus
 -- Log: Submitted by Emmaleah on Sat, 2012-08-18 15:07. 
 
-WoWPro.Leveling:RegisterGuide('EmmKun8889', 'Kun-Lai Summit', 'Emmaleah', '88', '89', 'EmmTow8990|EmmTow8990', 'Neutral', function()
+local guide = WoWPro:RegisterGuide('EmmKun8889', "Leveling", 'Kun-Lai Summit', 'Emmaleah', 'Neutral')
+WoWPro:GuideLevels(guide,87,89,87.007)
+WoWPro:GuideNextGuide(guide, 'EmmTow8990|EmmTow8990')
+WoWPro:GuideIcon(guide,"ACH",6976)
+WoWPro:GuideSteps(guide, function()
 return [[
 
 L Level 87 |QID|31254;31255|N|You need to be level 87 or higher to be able to work through this guide.|LVL|87|

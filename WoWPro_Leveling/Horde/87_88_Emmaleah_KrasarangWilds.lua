@@ -4,6 +4,26 @@
 -- Permissions beyond the scope of this license may be available at http://www.wow-pro.com/License.
 
 -- URL: http://wow-pro.com/wiki/source_code_krasarang_wilds_horde
+-- Date: 2014-06-02 14:11
+-- Who: Ludovicus
+-- Log: Set Levels
+
+-- URL: http://wow-pro.com/node/3489/revisions/26304/view
+-- Date: 2014-05-26 01:24
+-- Who: Ludovicus
+-- Log: Added guide type.
+
+-- URL: http://wow-pro.com/node/3489/revisions/26112/view
+-- Date: 2014-05-18 22:45
+-- Who: Ludovicus
+-- Log: Icon
+
+-- URL: http://wow-pro.com/node/3489/revisions/25998/view
+-- Date: 2014-05-16 20:26
+-- Who: Ludovicus
+-- Log: Register Update
+
+-- URL: http://wow-pro.com/node/3489/revisions/25823/view
 -- Date: 2013-11-27 21:00
 -- Who: Ludovicus
 -- Log: Added missing CN tag
@@ -84,7 +104,11 @@
 -- Who: Ludovicus
 -- Log: Submitted by Emmaleah on Sat, 2012-08-18 15:07. 
 
-WoWPro.Leveling:RegisterGuide('EmmKra8788', 'Krasarang Wilds', 'Emmaleah', '87', '88', 'EmmKun8889', 'Horde', function()
+local guide = WoWPro:RegisterGuide('EmmKra8788', "Leveling", 'Krasarang Wilds', 'Emmaleah', 'Horde')
+WoWPro:GuideLevels(guide,86,87,86.0091)
+WoWPro:GuideNextGuide(guide, 'EmmKun8889')
+WoWPro:GuideIcon(guide,"ACH",6975)
+WoWPro:GuideSteps(guide, function()
 return [[
 
 L Level 86 |QID|30079|LVL|86|N|You need to be Level 86 to do this guide.|

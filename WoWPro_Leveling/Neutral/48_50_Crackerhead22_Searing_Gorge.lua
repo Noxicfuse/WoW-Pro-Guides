@@ -4,6 +4,40 @@
 -- Permissions beyond the scope of this license may be available at http://www.wow-pro.com/License.
 
 -- URL: http://wow-pro.com/wiki/source_code_searing_gorge_neutral
+-- Date: 2014-06-02 16:11
+-- Who: Ludovicus
+-- Log: Add guide level
+
+-- URL: http://wow-pro.com/node/3255/revisions/26356/view
+-- Date: 2014-05-27 20:50
+-- Who: Ludovicus
+-- Log: GuideLevels corrected from "48,50" to "46,49".
+
+-- URL: http://wow-pro.com/node/3255/revisions/26253/view
+-- Date: 2014-05-25 23:04
+-- Who: Ludovicus
+-- Log: Added guide type.
+
+-- URL: http://wow-pro.com/node/3255/revisions/26127/view
+-- Date: 2014-05-20 11:36
+-- Who: Ludovicus
+
+-- URL: http://wow-pro.com/node/3255/revisions/26102/view
+-- Date: 2014-05-18 22:18
+-- Who: Ludovicus
+-- Log: Icon
+
+-- URL: http://wow-pro.com/node/3255/revisions/26062/view
+-- Date: 2014-05-17 20:35
+-- Who: Ludovicus
+-- Log: New registration guide.
+
+-- URL: http://wow-pro.com/node/3255/revisions/25909/view
+-- Date: 2014-03-06 23:46
+-- Who: Ludovicus
+-- Log: Dont send Hordies to the ALLIANCE flightmaster!
+
+-- URL: http://wow-pro.com/node/3255/revisions/25803/view
 -- Date: 2013-11-18 20:37
 -- Who: Fluclo
 
@@ -87,7 +121,11 @@
 -- Date: 2010-12-03 11:40
 -- Who: Jiyambi
 
-WoWPro.Leveling:RegisterGuide('CraSea4850', 'Searing Gorge', 'Crackerhead22', '48', '50', 'CraBur5052|LiaBur5052', 'Neutral', function()
+local guide = WoWPro:RegisterGuide('CraSea4850', "Leveling", 'Searing Gorge', 'Crackerhead22', 'Neutral')
+WoWPro:GuideLevels(guide,46,49, 46.021)
+WoWPro:GuideNextGuide(guide, 'CraBur5052|LiaBur5052')
+WoWPro:GuideIcon(guide,"ACH",4910)
+WoWPro:GuideSteps(guide, function()
 return [[
 
 L Level 46|QID|27963|N|You need to be Level 46 to do this guide.|LVL|46|
@@ -209,7 +247,8 @@ h Iron Summit|M|39.21,66.02|N|At Velma Rockslide.|QID|28035|
 F Thorium Point|QID|28035|M|40.89,68.91|N|Fly to Thorium Point.|
 T The Mountain-Lord's Support|QID|28035|M|38.09,26.82|N|To Overseer Oilfist.|
 A Operation: Stir the Cauldron|QID|28052|M|38.09,26.82|N|From Overseer Oilfist.|
-C Operation: Stir the Cauldron|QID|28052|M|41.44,55.72|N|Talk to Lanie Reed, choose the option to take the flying machine. Hit the 1 button and aim where you want to fire and click to fire.|
+C Operation: Stir the Cauldron|QID|28052|M|41.44,55.72|N|Talk to Lanie Reed, choose the option to take the flying machine. Hit the 1 button and aim where you want to fire and click to fire.|FACTION|Alliance|
+C Operation: Stir the Cauldron|QID|28052|M|34.84,30.89|N|Talk to Grisha, choose the option to take the flying machine. Hit the 1 button and aim where you want to fire and click to fire.|FACTION|Horde|
 T Operation: Stir the Cauldron|QID|28052|M|40.89,51.84|N|To Mountain-Lord Rendan.|
 
 A Slavery is Bad|QID|28054|M|40.89,51.84|N|From Mountain-Lord Rendan.|

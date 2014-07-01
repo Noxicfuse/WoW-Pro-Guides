@@ -4,6 +4,35 @@
 -- Permissions beyond the scope of this license may be available at http://www.wow-pro.com/License.
 
 -- URL: http://wow-pro.com/wiki/source_code_townlong_steppes_neutral
+-- Date: 2014-06-02 14:03
+-- Who: Ludovicus
+-- Log: Reset levels
+
+-- URL: http://wow-pro.com/node/3492/revisions/26396/view
+-- Date: 2014-05-30 12:07
+-- Who: Ludovicus
+-- Log: Level adjustment
+
+-- URL: http://wow-pro.com/node/3492/revisions/26360/view
+-- Date: 2014-05-27 21:02
+-- Who: Ludovicus
+-- Log: Start Level corrected from 89 to 0.
+
+-- URL: http://wow-pro.com/node/3492/revisions/26306/view
+-- Date: 2014-05-26 01:26
+-- Who: Ludovicus
+-- Log: Added guide type.
+
+-- URL: http://wow-pro.com/node/3492/revisions/26114/view
+-- Date: 2014-05-18 22:50
+-- Who: Ludovicus
+-- Log: Icon
+
+-- URL: http://wow-pro.com/node/3492/revisions/26047/view
+-- Date: 2014-05-17 18:58
+-- Who: Ludovicus
+
+-- URL: http://wow-pro.com/node/3492/revisions/25689/view
 -- Date: 2013-05-28 12:19
 -- Who: Ludovicus
 -- Log: Corrected coords, quids, and some extra CC's that were preventing R step completion.
@@ -67,7 +96,11 @@
 -- Who: Ludovicus
 -- Log: Original from Emmaleah
 
-WoWPro.Leveling:RegisterGuide('EmmTow8990', 'Townlong Steppes', 'Emmaleah', '89', '90', 'EmmDre8990|EmmDre8990', 'Neutral', function()
+local guide = WoWPro:RegisterGuide('EmmTow8990', "Leveling", 'Townlong Steppes', 'Emmaleah', 'Neutral')
+WoWPro:GuideLevels(guide,88,90,88.0139)
+WoWPro:GuideNextGuide(guide, 'EmmDre8990|EmmDre8990')
+WoWPro:GuideIcon(guide,"ACH",6977)
+WoWPro:GuideSteps(guide, function()
 return [[
 
 N Welcome to Townlong Steppes|QID|30814|N|This guide starts in Longying Outpost, You may have two lead in qusets to turn in here, if you don't have them, check off those steps and proceed.|

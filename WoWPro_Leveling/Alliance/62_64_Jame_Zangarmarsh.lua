@@ -4,6 +4,31 @@
 -- Permissions beyond the scope of this license may be available at http://www.wow-pro.com/License.
 
 -- URL: http://wow-pro.com/wiki/source_code_zangarmarsh_alliance
+-- Date: 2014-05-30 12:10
+-- Who: Ludovicus
+-- Log: Level Adjust
+
+-- URL: http://wow-pro.com/node/3273/revisions/26367/view
+-- Date: 2014-05-27 21:15
+-- Who: Ludovicus
+-- Log: Start Level corrected from 62 to 0.
+
+-- URL: http://wow-pro.com/node/3273/revisions/26268/view
+-- Date: 2014-05-26 00:36
+-- Who: Ludovicus
+-- Log: Added guide type.
+
+-- URL: http://wow-pro.com/node/3273/revisions/26144/view
+-- Date: 2014-05-20 19:34
+-- Who: Ludovicus
+-- Log: Icon
+
+-- URL: http://wow-pro.com/node/3273/revisions/25983/view
+-- Date: 2014-05-14 22:39
+-- Who: Ludovicus
+-- Log: New registration guide.
+
+-- URL: http://wow-pro.com/node/3273/revisions/25425/view
 -- Date: 2013-01-13 15:05
 -- Who: Ludovicus
 -- Log: Added CN tag
@@ -86,7 +111,11 @@
 -- Date: 2010-12-03 12:11
 -- Who: Jiyambi
 
-WoWPro.Leveling:RegisterGuide("JamZan6264", "Zangarmarsh", "Jame", "62","64", "JamTer6466", "Alliance", function()
+local guide = WoWPro:RegisterGuide("JamZan6264", "Leveling", "Zangarmarsh", "Jame", "Alliance")
+WoWPro:GuideLevels(guide,58,64,60.6291)
+WoWPro:GuideNextGuide(guide, "JamTer6466")
+WoWPro:GuideIcon(guide,"ACH",4928)
+WoWPro:GuideSteps(guide, function()
 return [[
 
 R Zangarmarsh|QID|9912|N|Go to Zangarmarsh.|M|82.9,65.08|

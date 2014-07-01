@@ -4,6 +4,26 @@
 -- Permissions beyond the scope of this license may be available at http://www.wow-pro.com/License.
 
 -- URL: http://wow-pro.com/wiki/source_code_hinterlands_alliance
+-- Date: 2014-05-27 21:03
+-- Who: Ludovicus
+-- Log: GuideLevels corrected from "0,0" to "29,34".
+
+-- URL: http://wow-pro.com/node/3239/revisions/26320/view
+-- Date: 2014-05-26 19:55
+-- Who: Ludovicus
+-- Log: Added Guide Type.
+
+-- URL: http://wow-pro.com/node/3239/revisions/26091/view
+-- Date: 2014-05-18 22:07
+-- Who: Ludovicus
+-- Log: Icon
+
+-- URL: http://wow-pro.com/node/3239/revisions/25969/view
+-- Date: 2014-05-14 22:24
+-- Who: Ludovicus
+-- Log: New registration guide.
+
+-- URL: http://wow-pro.com/node/3239/revisions/25850/view
 -- Date: 2013-12-25 02:06
 -- Who: Fluclo
 -- Log: Added couple flight steps for Sharpbeak
@@ -66,7 +86,11 @@
 -- Date: 2010-12-03 11:12
 -- Who: Jiyambi
 
-WoWPro.Leveling:RegisterGuide('CraHin3035', 'The Hinterlands', 'Crackerhead22', '30', '35', 'BitWes3540', 'Alliance', function()
+local guide = WoWPro:RegisterGuide('CraHin3035', 'Leveling', 'The Hinterlands', 'Crackerhead22', 'Alliance')
+WoWPro:GuideLevels(guide,29,34)
+WoWPro:GuideNextGuide(guide, 'BitWes3540')
+WoWPro:GuideIcon(guide,"ACH",4897)
+WoWPro:GuideSteps(guide, function()
 return [[
 
 L Level 29 |QID|26546|LVL|29|N|This guide requires a minimum level of 29 to do.|

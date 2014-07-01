@@ -4,6 +4,31 @@
 -- Permissions beyond the scope of this license may be available at http://www.wow-pro.com/License.
 
 -- URL: http://wow-pro.com/wiki/source_code_gilneas
+-- Date: 2014-06-03 22:12
+-- Who: Ludovicus
+-- Log: Missing "
+
+-- URL: http://wow-pro.com/node/3211/revisions/26476/view
+-- Date: 2014-06-02 22:07
+-- Who: Ludovicus
+-- Log: Icons
+
+-- URL: http://wow-pro.com/node/3211/revisions/26345/view
+-- Date: 2014-05-27 20:28
+-- Who: Ludovicus
+-- Log: Max Level corrected from 13 to 12.
+
+-- URL: http://wow-pro.com/node/3211/revisions/26207/view
+-- Date: 2014-05-25 22:21
+-- Who: Ludovicus
+-- Log: Added guide type.
+
+-- URL: http://wow-pro.com/node/3211/revisions/25954/view
+-- Date: 2014-05-14 22:02
+-- Who: Ludovicus
+-- Log: New registration guide.
+
+-- URL: http://wow-pro.com/node/3211/revisions/25627/view
 -- Date: 2013-05-14 15:43
 -- Who: Ludovicus
 -- Log: Changed name from [Arcane Missiles] to [Frost Nova]
@@ -167,7 +192,12 @@
 -- Date: 2010-12-03 07:17
 -- Who: Jiyambi
 
-WoWPro.Leveling:RegisterGuide("RpoGil0113", "Gilneas (Worgen)", "Rpotor", "01", "13", "JamDar1320", "Alliance", function()
+local guide = WoWPro:RegisterGuide("RpoGil0113", "Leveling", "Gilneas (Worgen)", "Rpotor", "Alliance")
+WoWPro:GuideLevels(guide,1,12)
+WoWPro:GuideRaceSpecific(guide,"Worgen")
+WoWPro:GuideIcon(guide,"Icon", WoWPro:GuidePickGender("Interface\\Icons\\Achievement_Character_Worgen_Male","Interface\\Icons\\Achievement_Character_Worgen_Female"))
+WoWPro:GuideNextGuide(guide, "JamDar1320")
+WoWPro:GuideSteps(guide, function()
 return [[
 
 ; Zone is Ruins of Gilneas City

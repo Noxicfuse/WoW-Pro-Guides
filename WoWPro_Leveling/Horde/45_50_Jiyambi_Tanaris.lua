@@ -4,6 +4,25 @@
 -- Permissions beyond the scope of this license may be available at http://www.wow-pro.com/License.
 
 -- URL: http://wow-pro.com/wiki/source_code_tanaris_horde
+-- Date: 2014-06-02 15:04
+-- Who: Ludovicus
+-- Log: Level Setting
+
+-- URL: http://wow-pro.com/node/3260/revisions/26257/view
+-- Date: 2014-05-25 23:07
+-- Who: Ludovicus
+-- Log: Added guide type.
+
+-- URL: http://wow-pro.com/node/3260/revisions/26086/view
+-- Date: 2014-05-18 21:57
+-- Who: Ludovicus
+-- Log: Icon
+
+-- URL: http://wow-pro.com/node/3260/revisions/26017/view
+-- Date: 2014-05-16 22:05
+-- Who: Ludovicus
+
+-- URL: http://wow-pro.com/node/3260/revisions/25448/view
 -- Date: 2013-01-13 17:43
 -- Who: Ludovicus
 -- Log: Copied [A Great Idea] sequence from Alliance guide.
@@ -26,7 +45,11 @@
 -- Date: 2010-12-03 11:49
 -- Who: Jiyambi
 
-WoWPro.Leveling:RegisterGuide('JiyTan4550', 'Tanaris', 'Jiyambi', '45', '50', 'JiyUng5055', 'Horde', function()
+local guide = WoWPro:RegisterGuide('JiyTan4550', "Leveling", 'Tanaris', 'Jiyambi', 'Horde')
+WoWPro:GuideLevels(guide,43,49, 44.6667)
+WoWPro:GuideNextGuide(guide, 'JiyUng5055')
+WoWPro:GuideIcon(guide,"ACH",4935)
+WoWPro:GuideSteps(guide, function()
 return [[
 
 h Gadgetzan|QID|24906|M|52.59,27.00|N|Set your hearth at Innkeeper Fizzgrimble, if you'd like.|

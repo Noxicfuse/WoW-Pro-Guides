@@ -4,6 +4,26 @@
 -- Permissions beyond the scope of this license may be available at http://www.wow-pro.com/License.
 
 -- URL: http://wow-pro.com/wiki/source_code_howling_fjord_alliance
+-- Date: 2014-05-27 19:58
+-- Who: Ludovicus
+-- Log: GuideLevels corrected from "72,74" to "68,71".
+
+-- URL: http://wow-pro.com/node/3287/revisions/26279/view
+-- Date: 2014-05-26 00:59
+-- Who: Ludovicus
+-- Log: Added guide type.
+
+-- URL: http://wow-pro.com/node/3287/revisions/26165/view
+-- Date: 2014-05-20 19:57
+-- Who: Ludovicus
+-- Log: Icon
+
+-- URL: http://wow-pro.com/node/3287/revisions/25989/view
+-- Date: 2014-05-14 22:44
+-- Who: Ludovicus
+-- Log: New registration guide.
+
+-- URL: http://wow-pro.com/node/3287/revisions/25597/view
 -- Date: 2013-03-23 20:40
 -- Who: Ludovicus
 -- Log: quest name tweaks
@@ -46,7 +66,11 @@
 -- Date: 2010-12-03 22:07
 -- Who: Jiyambi
 
-WoWPro.Leveling:RegisterGuide("JamHow7274", "Howling Fjord", "Jame", "72", "74", "JamDra7475", "Alliance", function()
+local guide = WoWPro:RegisterGuide("JamHow7274", "Leveling", "Howling Fjord", "Jame", "Alliance")
+WoWPro:GuideLevels(guide,68,71)
+WoWPro:GuideNextGuide(guide, "JamDra7475")
+WoWPro:GuideIcon(guide,"ACH",4928)
+WoWPro:GuideSteps(guide, function()
 return [[
 
 A Hell Has Frozen Over... |QID|11228|M|61.1,62.7|N|From Macalroy.|

@@ -4,6 +4,45 @@
 -- Permissions beyond the scope of this license may be available at http://www.wow-pro.com/License.
 
 -- URL: http://wow-pro.com/wiki/source_code_dun_morogh
+-- Date: 2014-05-30 12:19
+-- Who: Ludovicus
+-- Log: Level setting
+
+-- URL: http://wow-pro.com/node/3200/revisions/26386/view
+-- Date: 2014-05-29 22:17
+-- Who: Ludovicus
+-- Log: Add mean level
+
+-- URL: http://wow-pro.com/node/3200/revisions/26319/view
+-- Date: 2014-05-26 19:55
+-- Who: Ludovicus
+-- Log: Added Guide type.
+
+-- URL: http://wow-pro.com/node/3200/revisions/26204/view
+-- Date: 2014-05-25 22:08
+-- Who: Ludovicus
+-- Log: Added guide type.
+
+-- URL: http://wow-pro.com/node/3200/revisions/26021/view
+-- Date: 2014-05-17 16:06
+-- Who: Ludovicus
+
+-- URL: http://wow-pro.com/node/3200/revisions/25955/view
+-- Date: 2014-05-14 22:05
+-- Who: Ludovicus
+-- Log: New registration guide.
+
+-- URL: http://wow-pro.com/node/3200/revisions/25951/view
+-- Date: 2014-05-14 21:54
+-- Who: Ludovicus
+-- Log: New register guide.
+
+-- URL: http://wow-pro.com/node/3200/revisions/25950/view
+-- Date: 2014-05-14 21:51
+-- Who: Ludovicus
+-- Log: New Guide Registration
+
+-- URL: http://wow-pro.com/node/3200/revisions/25638/view
 -- Date: 2013-05-14 18:52
 -- Who: Ludovicus
 -- Log: [A Triumph of Gnomish Ingenuity] not [Triumph of Gnomish Ingenuity]
@@ -225,27 +264,11 @@
 -- Date: 2010-12-22 06:20
 -- Who: Gylin
 
--- URL: http://wow-pro.com/node/3200/revisions/23632/view
--- Date: 2010-12-06 09:00
--- Who: Gylin
-
--- URL: http://wow-pro.com/node/3200/revisions/23631/view
--- Date: 2010-12-06 08:58
--- Who: Gylin
-
--- URL: http://wow-pro.com/node/3200/revisions/23319/view
--- Date: 2010-12-03 07:56
--- Who: Jiyambi
-
--- URL: http://wow-pro.com/node/3200/revisions/23261/view
--- Date: 2010-12-02 21:47
--- Who: Jiyambi
-
--- URL: http://wow-pro.com/node/3200/revisions/23260/view
--- Date: 2010-12-02 21:46
--- Who: Jiyambi
-
-WoWPro.Leveling:RegisterGuide("GylGno0105", "Dun Morogh (Gnome)", "Gylin - Gnome", "01", "05", "GamDun0510", "Alliance", function()
+local guide = WoWPro:RegisterGuide("GylGno0105", "Leveling", "Dun Morogh (Gnome)", "Gylin - Gnome", "Alliance")
+WoWPro:GuideLevels(guide,1,5)
+WoWPro:GuideNextGuide(guide, "GamDun0510")
+WoWPro:GuideIcon(guide,"Icon", WoWPro:GuidePickGender("Interface\\Icons\\Achievement_Character_Gnome_Male","Interface\\Icons\\Achievement_Character_Gnome_Female"))
+WoWPro:GuideSteps(guide, function()
 return
 [[
 

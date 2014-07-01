@@ -4,6 +4,36 @@
 -- Permissions beyond the scope of this license may be available at http://www.wow-pro.com/License.
 
 -- URL: http://wow-pro.com/wiki/source_code_teldrassil
+-- Date: 2014-06-04 20:13
+-- Who: Ludovicus
+-- Log: Level adj
+
+-- URL: http://wow-pro.com/node/3204/revisions/26478/view
+-- Date: 2014-06-02 22:10
+-- Who: Ludovicus
+-- Log: Icons
+
+-- URL: http://wow-pro.com/node/3204/revisions/26350/view
+-- Date: 2014-05-27 20:40
+-- Who: Ludovicus
+-- Log: GuideLevels corrected from "0,0" to "1,9".
+
+-- URL: http://wow-pro.com/node/3204/revisions/26205/view
+-- Date: 2014-05-25 22:18
+-- Who: Ludovicus
+-- Log: Added guide type.
+
+-- URL: http://wow-pro.com/node/3204/revisions/26140/view
+-- Date: 2014-05-20 19:20
+-- Who: Ludovicus
+-- Log: Icon
+
+-- URL: http://wow-pro.com/node/3204/revisions/25952/view
+-- Date: 2014-05-14 21:57
+-- Who: Ludovicus
+-- Log: New registration guide.
+
+-- URL: http://wow-pro.com/node/3204/revisions/25588/view
 -- Date: 2013-03-23 20:17
 -- Who: Ludovicus
 -- Log: Name tweak on [The Moss-Twined Heart]
@@ -91,7 +121,11 @@
 -- Date: 2010-12-02 23:13
 -- Who: Jiyambi
 
-WoWPro.Leveling:RegisterGuide('BitTel0110', 'Teldrassil', 'Bitsem', '01', '10', 'JamDar1320', 'Alliance', function()
+local guide = WoWPro:RegisterGuide('BitTel0110', "Leveling", 'Teldrassil', 'Bitsem', 'Alliance')
+WoWPro:GuideLevels(guide,1,9, 3.5814)
+WoWPro:GuideNextGuide(guide, 'JamDar1320')
+WoWPro:GuideIcon(guide,"Icon", WoWPro:GuidePickGender("Interface\\Icons\\Achievement_Character_Nightelf_Male","Interface\\Icons\\Achievement_Character_Nightelf_Female"))
+WoWPro:GuideSteps(guide, function()
 return [[
 
 A The Balance of Nature|QID|28713|M|57.97,39.19|N|From Ilthalaine.|
